@@ -28,18 +28,10 @@ namespace Lab1_Class
                 {
                     case 'A':
                         Console.Clear();
-                        try
+                        foreach (var student in studentNames)
                         {
-                            foreach (var student in studentNames)
-                            {
-                                Console.WriteLine($"{student.Key} has a grade of {student.Value}\n");
-                            }
+                            Console.WriteLine($"{student.Key} has a grade of {student.Value}\n");
                         }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine("Add students... Enter B");
-                        }
-                        
                         break;
                         
                     case 'B':
