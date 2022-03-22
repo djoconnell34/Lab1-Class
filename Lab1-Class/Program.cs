@@ -10,7 +10,6 @@ namespace Lab1_Class
 {
     internal class Program
     {
-        
         public static HashMap<string, double> studentNames = new HashMap<string, double>();
 
         static void Main(string[] args)
@@ -30,7 +29,7 @@ namespace Lab1_Class
                         Console.Clear();
                         foreach (var student in studentNames)
                         {
-                            Console.WriteLine($"{student.Key} has a grade of {student.Value}\n");
+                            Console.WriteLine($"{student.Key} has a grade of {student.Value}%\n");
                         }
                         break;
                         
@@ -48,13 +47,11 @@ namespace Lab1_Class
                         Console.Write("What grade did he/she get: ");
                         double tempGrade3 = double.Parse(Console.ReadLine());
                         studentNames.Add(tempName2, tempGrade3);
-                        Console.WriteLine($"A new grade of {tempGrade3} was added to {tempName2}\n");
+                        Console.WriteLine($"A new grade of {tempGrade3}% was added to {tempName2}\n");
                         break;
                     case 'D':
                         Console.Clear();
-                        double avg = 0;
-                        int count = 1;
-                        Console.WriteLine($"The Class average is: {Math.Round(studentNames.Values.Average(), 2)}\n");
+                        Console.WriteLine($"The Class average is: {Math.Round(studentNames.Values.Average(), 2)}%\n");
                         break;
                     case 'E':
                         Console.Clear();
@@ -63,7 +60,7 @@ namespace Lab1_Class
                         {
                             if (tempName4 == student.Value)
                             {
-                                Console.WriteLine($"{student.Key} has the highest grade of {student.Value}\n");
+                                Console.WriteLine($"{student.Key} has the highest grade of {student.Value}%\n");
                             }
                         }
                         break;
@@ -74,7 +71,7 @@ namespace Lab1_Class
                         {
                             if (tempName5 == student.Value)
                             {
-                                Console.WriteLine($"{student.Key} has the lowest grade of {student.Value}\n");
+                                Console.WriteLine($"{student.Key} has the lowest grade of {student.Value}%\n");
                             }
                         }
                         break;
@@ -100,7 +97,7 @@ namespace Lab1_Class
                                 studentNames.Add(tempName7, tempName8);
                             }
                         }
-                        Console.WriteLine($"{tempName7} grade has been changed to {tempName8}\n");
+                        Console.WriteLine($"{tempName7} grade has been changed to {tempName8}%\n");
                         break;
                     case 'Q':
                         Console.Clear();
